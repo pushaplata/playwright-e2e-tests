@@ -1,0 +1,19 @@
+{
+  "name": "playwright-e2e-tests",
+  "version": "1.0.0",
+  "description": "Playwright e2e tests with AI capabilities including MCP",
+  "keywords": [
+    "playeright",
+    "playwright-e2e-tests",
+    "playwright-mcp"
+  ],
+  "license": "ISC",
+  "author": "Pushap Lata",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.10.1"
+  }
+}
