@@ -1,0 +1,13 @@
+{
+    "STATUSCODE": {
+        "success": 200,
+        "validationError": 707,
+        "serverError": 500
+    },
+    
+        "REQ_RES_ENDPOINTS": {
+            "GET_USERS_LIST": "/users?pages=2",
+            "POST_USER": "/users"
+        }
+    
+}

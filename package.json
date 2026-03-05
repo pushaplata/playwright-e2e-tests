@@ -9,15 +9,36 @@
   ],
   "license": "ISC",
   "author": "Pushap Lata",
-  "type": "commonjs",
   "main": "index.js",
-  "scripts": { 
-    "login": "npx playwright test tests/functional/login.spec.ts --headed", 
-    "demo": "npx playwright test tests/demo/mytest.spec.ts --headed", 
-    "demo:firefox" : "npx playwright test tests/demo/mytest.spec.ts --project=firefox --headed"
+  "scripts": {
+    "test:api": "npx playwright test --config config/test.playwright.config.ts tests/api/user.api.spec.ts",
+    "test:e2e": "npx playwright test --config config/test.playwright.config.ts tests/e2e/nopcommerce.e2e.spec.ts --headed",
+    "dev:make-apmt": "npx playwright test --config config/dev.playwright.config.ts tests/functional/make.apmt.spec.ts --headed",
+    "test:make-apmt": "npx playwright test --config config/test.playwright.config.ts tests/functional/make.apmt.spec.ts --headed",
+    "demo:param": "npx playwright test tests/demo/param.make.apmt.spec.ts --headed",
+    "demo:parallel": "npx playwright test --grep @demo",
+    "demo:global": "npx playwright test tests/functional/login.spec.ts",
+    "login": "npx playwright test tests/functional/login.spec.ts --headed",
+    "make-apmt": "npx playwright test tests/functional/make.apmt.spec.ts --headed",
+    "pw-cap-apmt": "npx playwright test tests/demo/pw.cap.apmt.spec.ts --headed",
+    "demo:hooks": "npx playwright test tests/demo/hookes-demo.spec.ts --headed",
+    "pw-advcap-apmt": " DEBUG=pw:api npx playwright test tests/demo/add.advcap.login.spec.ts --headed",
+    "pw-cap-apmt:tag": "npx playwright test --grep @smoke --headed",
+    "debug-apmt": "npx playwright test tests/demo/debug.apmt.spec.ts --headed",
+    "debug-apmt:ui": "npx playwright test tests/demo/debug.apmt.spec.ts --ui --headed",
+    "debug-apmt:CLI": "PWDEBUG=1 npx playwright test tests/demo/debug.apmt.spec.ts",
+    "debug-apmt:trace": "npx playwright test tests/demo/debug.apmt.spec.ts --trace on",
+    "inverty-test": "npx playwright test tests/functional/inventry.spec.ts --headed",
+    "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
+    "ele-int": "npx playwright test tests/demo/ele.handling.make.apmt.spec.ts --headed",
+    "demo:firefox": "npx playwright test tests/demo/mytest.spec.ts --project=firefox --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "allure-playwright": "^3.4.2",
+    "chalk": "^5.6.2",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.3.1"
   }
 }
