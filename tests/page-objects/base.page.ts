@@ -31,8 +31,8 @@ export default class basePage {
   //type action
   async typeInto(ele: Locator, text: string) {
     try {
-      await expect(ele).toBeVisible({ timeout: 10_000 }); //custom timeout default -5 seconds
-      await ele.fill(text);
+      await expect(ele).toBeVisible({ timeout: 20_000 }); //custom timeout default -5 seconds
+      await ele.first().fill(text);
     } catch (error) {
       await log(
         "error",

@@ -24,6 +24,7 @@ export const baseConfig = defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+  //timeout: 30_000,
   expect: { timeout: 10_000 },
   globalSetup: require.resolve('./tests/helpers/global-setup.ts'),
   globalTeardown: require.resolve('./tests/helpers/global-teardown.ts'),

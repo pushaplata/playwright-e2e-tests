@@ -22,7 +22,7 @@ export default class TestData {
     ];
   }
 
- static apiUserCreation() {
+  static apiUserCreation() {
     return [
       {
         name: "John Doe",
