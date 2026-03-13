@@ -27,7 +27,7 @@ test.describe("Make Appointment functionality", () => {
     await page.getByRole("button", { name: "Login" }).click();
     await expect(page.locator("h2")).toContainText("Make Appointment");
     await log("info", "Login successful, navigated to Make Appointment page");
-    await log("error", "The next page is not loaded");
+    
   });
 
   test("Should make ap[ayment with non- default valuse", async ({ page }) => {
